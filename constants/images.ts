@@ -1,0 +1,6 @@
+
+const placeHolderImage = ''
+
+export {
+    placeHolderImage
+}
