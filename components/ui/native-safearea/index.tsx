@@ -18,7 +18,7 @@ const NativeSafeAreaView: FC<NativeSafeAreaViewProps> = (props) => {
   };
 
   return (
-    <SafeAreaView style={[safeAreaStyle, style]} {...rest}>
+    <SafeAreaView style={[safeAreaStyle, style, {backgroundColor: 'white'}]} {...rest}>
       {children}
     </SafeAreaView>
   );

@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, PropsWithChildren } from "react";
 
 type ComponentWithProps<P = Record<string, unknown>> = [FC<P>, P?];
 
