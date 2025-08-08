@@ -12,4 +12,10 @@ const signUp = async (payload: { email: string; password: string }) => {
   return data;
 };
 
-export { login, signUp };
+const signOut = async () => {
+  const { error } = await supabase.auth.signOut();
+  if (error) throw error;
+  return true;
+}
+
+export { login, signUp, signOut };

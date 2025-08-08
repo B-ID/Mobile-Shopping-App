@@ -1,9 +1,20 @@
-import { supabase } from "@/lib/supabase"
+import { supabase } from "@/lib/supabase";
+import { AddProductMutationArg } from "../types";
 
-const getProductList = async () => {}
+const getProducts = async () => {
+  const { data, error } = await supabase.from("products").select("*");
+  if (error) throw error;
+  return data;
+};
 
+const addProduct = async (payload: AddProductMutationArg) => {
+  const { data, error } = await supabase.from("products").insert({
+    name: payload.name,
+    price: payload.price,
+    imageUrl: payload.imageurl,
+  });
+  if (error) throw error;
+  return data;
+};
 
-const createProduct = async (payload) => {}
-
-
-export { getProductList, createProduct }
+export { getProducts, addProduct };

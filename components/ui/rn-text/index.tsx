@@ -52,9 +52,14 @@ const variantStyles: Record<Variant, TextStyle> = {
     fontFamily: FONT.MontserratRegular,
   },
   small_medium: {
-
+    fontSize: 14,
+    color: Colors.light.default,
+    fontFamily: FONT.MontserratMedium,
   },
   small_semibold: {
+    fontSize: 14,
+    color: Colors.light.default,
+    fontFamily: FONT.MontserratSemiBold,
 
   }
 };

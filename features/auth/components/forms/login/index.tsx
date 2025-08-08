@@ -59,6 +59,7 @@ const LoginForm = () => {
             />
             <GapComponent height={24}/>
             <Button textClassName={'text-white text-lg'} variant={'primary'} size={'primary'} loading={isPending}
+            disabled={isPending}
                     onPress={form.handleSubmit(onSubmitHandler)}>
                 {isPending ? 'Logging in..' : 'Login'}
             </Button>

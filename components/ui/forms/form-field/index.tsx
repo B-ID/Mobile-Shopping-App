@@ -32,6 +32,7 @@ const FormField = <T extends FieldValues>({
                         onBlur={onBlur}
                         onChangeText={onChange}
                         value={value as string}
+                        selectionColor={COLORS.default}
                         {...inputProps}
                     />
                 )}

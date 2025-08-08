@@ -5,14 +5,13 @@ import Container from "@/components/ui/container";
 import NativeSafeAreaView from "@/components/ui/native-safearea";
 import ProductList from "@/features/products/components/product-list";
 import { useRouter } from "expo-router";
-import { ScrollView, View } from "react-native";
 import { PlusIcon } from "lucide-react-native";
 
 export default function HomeScreen() {
   const router = useRouter();
 
-  const goToCreateProduct = () => {
-    router.push("/(modals)/create-product");
+  const goToAddProduct = () => {
+    router.push("/(modals)/add-product");
   };
 
   return (
@@ -23,19 +22,15 @@ export default function HomeScreen() {
           rightElement={
             <Button
               leftIcon={<PlusIcon color="#fff" className="text-white" />}
-              onPress={goToCreateProduct}
+              onPress={goToAddProduct}
             >
               Add product
             </Button>
           }
         />
-        <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-          <Container>
-            <ProductList />
-          </Container>
-
-          <Container></Container>
-        </ScrollView>
+        <Container>
+          <ProductList />
+        </Container>
       </Canvas>
     </NativeSafeAreaView>
   );
