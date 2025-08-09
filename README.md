@@ -96,5 +96,7 @@ npm run reset-project
 | Screen  | Preview |
 |---------|---------|
 | **Products** | ![products](https://github.com/user-attachments/assets/26087e20-7403-46ce-9aa1-fc8c092e3a60) |
+| **Add Product** | ![add-product](https://github.com/user-attachments/assets/67290ceb-f7a6-4e4f-9211-14b015896390)|
 | **Cart** | ![cart](https://github.com/user-attachments/assets/ee8b954d-cb13-4284-8f18-3d1f2ca19aa6) |
 | **Checkout** |![checkout](https://github.com/user-attachments/assets/c8e89664-5f55-4ecb-95a2-bc1e60fcf169)|
+
