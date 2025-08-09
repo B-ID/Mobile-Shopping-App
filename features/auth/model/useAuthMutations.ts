@@ -27,10 +27,18 @@ export const useAuthMutations = () => {
     mutationKey: ["login"],
     mutationFn: login,
     onError(error) {
-      console.error("Login failed:", error);
+      showToast({
+        title: "Auth Error",
+        type: "danger",
+        description: error.message || "An error occurred during sign up.",
+      });
     },
     onSuccess(data) {
-      // console.log(data);
+      showToast({
+        title: "Success",
+        type: "success",
+        description: 'You have signed in successful'
+      });
     },
   });
 

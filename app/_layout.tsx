@@ -40,6 +40,7 @@ export default function RootLayout() {
       setLoading(false);
     });
 
+
     return () => {
       subscription.unsubscribe();
     };
@@ -80,7 +81,6 @@ export default function RootLayout() {
           </Stack.Protected>
         </Stack>
       </ThemeProvider>
-
       <FlashMessage position={"top"} />
     </ProvidersTree>
   );

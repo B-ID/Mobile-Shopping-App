@@ -7,7 +7,7 @@ import {
   TextStyle,
 } from "react-native";
 
-type Variant = "title" | "subtitle" | "body" | "caption" | "small" | "small_medium" | "small_semibold" | "title_medium" | "title_medium_semibold";
+type Variant = "title" | "subtitle" | "body" | "caption" | "small" | "small_medium" | "small_semibold" | "title_medium" | "title_medium_semibold" | "subtitle_semibold";
 
 interface Props extends RNTextProps {
   variant?: Variant;
@@ -35,6 +35,12 @@ const variantStyles: Record<Variant, TextStyle> = {
     fontSize: 18,
     color: Colors.light.default,
     fontFamily: FONT.MontserratMedium,
+  },
+
+  subtitle_semibold: {
+    fontSize: 18,
+    color: Colors.light.default,
+    fontFamily: FONT.MontserratSemiBold,
   },
   body: {
     fontSize: 16,

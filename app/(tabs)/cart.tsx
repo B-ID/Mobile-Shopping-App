@@ -9,7 +9,7 @@ import { Text } from "@/components/ui/rn-text";
 import CartItem from "@/features/cart/components/cart-item";
 import { useCartStore } from "@/store/slices/cart";
 import { useRouter } from "expo-router";
-import { ShoppingCart, Trash2, Trash2Icon } from "lucide-react-native";
+import { ShoppingCart, Trash2 } from "lucide-react-native";
 import { EmptyState } from "@/components/empty-state";
 
 const CartScreen = () => {
@@ -29,6 +29,7 @@ const CartScreen = () => {
   const goHome = () => {
     router.push("/");
   };
+
 
   return (
     <NativeSafeAreaView>
@@ -57,8 +58,7 @@ const CartScreen = () => {
           <>
             <Container>
               <View className="flex-row items-center justify-between">
-                <Text variant="small_medium">Cart Summary</Text>
-
+                <Text variant="small_medium">Checkout Summary</Text>
                 <Button
                   variant={"destructive"}
                   size={"sm"}
@@ -84,12 +84,15 @@ const CartScreen = () => {
                   />
                 )}
                 contentContainerClassName="gap-4 "
-                ListFooterComponent={() => (
-                  <Button disabled={isEmpty} size="lg" onPress={goToCheckout}>
-                    Checkout
-                  </Button>
-                )}
               />
+            </Container>
+
+            <GapComponent flex={0.95} />
+
+            <Container>
+              <Button disabled={isEmpty} size="lg" onPress={goToCheckout}>
+                Checkout
+              </Button>
             </Container>
           </>
         )}

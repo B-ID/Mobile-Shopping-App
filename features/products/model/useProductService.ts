@@ -1,11 +1,13 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "expo-router";
-import { addProduct, getProducts } from "../api/products.service";
+import { addProduct, getProducts, placeOrder } from "../api/products.service";
 import { showToast } from "@/utils";
+import { useCartStore } from "@/store/slices/cart";
 
 export const useProductService = () => {
   const queryClient = useQueryClient();
   const router = useRouter();
+  const clearCart = useCartStore((state) => state.clearCart)
 
   const getProductsQuery = useQuery({
     queryKey: ["products"],
@@ -20,7 +22,7 @@ export const useProductService = () => {
       showToast({
         title: "Add product",
         type: "success",
-        description: 'Product has been added successfully.',
+        description: "Product has been added successfully.",
       });
 
       router.back();
@@ -29,5 +31,27 @@ export const useProductService = () => {
       console.error(err);
     },
   });
-  return { getProductsQuery, addProductMutation };
+
+  const checkoutMutation = useMutation({
+    mutationKey: ["checkout"],
+    mutationFn: placeOrder,
+    onSuccess() {
+      showToast({
+        title: "Checkout",
+        type: "success",
+        description: "Your order has been placed successfully.",
+      });
+      router.push("/");
+      clearCart()
+    },
+    onError(err) {
+      showToast({
+        title: "Checkout Error",
+        type: "danger",
+        description: err.message || "An error occurred while placing your order.",
+      });
+    },
+  });
+
+  return { checkoutMutation, getProductsQuery, addProductMutation };
 };
