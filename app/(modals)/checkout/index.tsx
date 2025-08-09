@@ -74,7 +74,7 @@ const CheckoutScreen = () => {
 
         <View
           style={{ borderColor: COLORS.default }}
-          className="w-full h-1 border"
+          className="w-full border"
         />
 
         <GapComponent height={10} />

@@ -45,9 +45,14 @@ const CartItem: FC<Props> = ({
             {product.name}
           </Text>
 
-          <Text variant="subtitle" className="mb-2">
-            {formatPrice(product.price)} x{product.quantity}
-          </Text>
+          <View className="flex-row">
+            <Text variant="subtitle_semibold" className="mb-2">
+              {formatPrice(product.price, "NGN")}
+            </Text>
+            <Text variant="subtitle" className="mb-2">
+              {" "}x{product.quantity}
+            </Text>
+          </View>
         </View>
         <GapComponent height={8} />
         {!hideControls && (
