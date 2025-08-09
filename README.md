@@ -1,5 +1,7 @@
 # Welcome to your Mobile Shopping App 👋
 
+A cross-platform e-commerce application built with **Expo React Native**, powered by **Supabase** for backend services, and using **Tanstack Query** for efficient data fetching.
+
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
@@ -33,18 +35,66 @@ When you're ready, run:
 npm run reset-project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🚀 Features
 
-## Learn more
+### User Authentication
+- Secure sign-up and login functionality
+- Email/password based authentication
 
-To learn more about developing your project with Expo, look at the following resources:
+### Product Catalog
+- Browse available products with images
+- View product details and pricing
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Shopping Cart
+- Add/remove items from cart
+- Adjust quantities
+- View cart summary with total
 
-## Join the community
+### Order Management
+- Checkout process
+- Order history tracking
+- Order status updates (pending, completed, etc.)
 
-Join our community of developers creating universal apps.
+## 🛠️ Tech Stack
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+| Technology       | Purpose                          |
+|------------------|----------------------------------|
+| Expo React Native| Cross-platform mobile development|
+| Tanstack Query   | Data fetching and state management|
+| Supabase         | Backend services and database    |
+
+## 🗃️ Database Schema
+
+### `products` Table
+| Field     | Type      | Description               |
+|-----------|-----------|---------------------------|
+| id        | UUID      | Unique product identifier |
+| created_at| timestamptz| Creation timestamp       |
+| name      | text      | Product name              |
+| imageUrl  | text      | Product image URL         |
+| price     | float4    | Product price             |
+
+### `orders` Table
+| Field       | Type      | Description                     |
+|-------------|-----------|---------------------------------|
+| id          | UUID      | Unique order identifier        |
+| created_at  | timestamptz| Creation timestamp            |
+| order_items | json      | List of products in order      |
+| status      | text      | Order status (e.g., pending)   |
+| total       | float4    | Order total amount             |
+| user_id     | UUID      | User who placed the order      |
+
+## 📱 Screenshots
+
+### Authentication
+| Screen  | Preview |
+|---------|---------|
+| **Sign Up** | <img src="sign-up.jpg" width="200"> |
+| **Login** | <img src="login.jpg" width="200"> |
+
+### Shopping Experience
+| Screen  | Preview |
+|---------|---------|
+| **Products** | <img src="products.jpg" width="200"> |
+| **Cart** | <img src="cart.jpg" width="200"> |
+| **Checkout** | <img src="checkout.jpg" width="200"> |
