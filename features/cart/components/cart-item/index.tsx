@@ -45,11 +45,11 @@ const CartItem: FC<Props> = ({
             {product.name}
           </Text>
 
-          <View className="flex-row">
-            <Text variant="subtitle_semibold" className="mb-2">
+          <View className="flex-row items-center">
+            <Text variant="subtitle" className="mb-2">
               {formatPrice(product.price, "NGN")}
             </Text>
-            <Text variant="subtitle" className="mb-2">
+            <Text variant="small_semibold" className="mb-2">
               {" "}x{product.quantity}
             </Text>
           </View>

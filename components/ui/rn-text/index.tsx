@@ -32,13 +32,13 @@ const variantStyles: Record<Variant, TextStyle> = {
     fontFamily: FONT.MontserratSemiBold,
   },
   subtitle: {
-    fontSize: 18,
+    fontSize: 17,
     color: Colors.light.default,
     fontFamily: FONT.MontserratMedium,
   },
 
   subtitle_semibold: {
-    fontSize: 18,
+    fontSize: 17,
     color: Colors.light.default,
     fontFamily: FONT.MontserratSemiBold,
   },
