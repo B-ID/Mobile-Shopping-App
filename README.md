@@ -89,12 +89,12 @@ npm run reset-project
 ### Authentication
 | Screen  | Preview |
 |---------|---------|
-| **Sign Up** | <img src="sign-up.jpg" width="200"> |
-| **Login** | <img src="login.jpg" width="200"> |
+| **Sign Up** | ![sign-up](https://github.com/user-attachments/assets/6ffd300d-9073-4b52-a932-edd9845796e7) |
+| **Login** | ![login](https://github.com/user-attachments/assets/d4f69cf1-6030-422d-8633-c8be0397b9df) |
 
 ### Shopping Experience
 | Screen  | Preview |
 |---------|---------|
-| **Products** | <img src="products.jpg" width="200"> |
-| **Cart** | <img src="cart.jpg" width="200"> |
-| **Checkout** | <img src="checkout.jpg" width="200"> |
+| **Products** | ![products](https://github.com/user-attachments/assets/26087e20-7403-46ce-9aa1-fc8c092e3a60) |
+| **Cart** | ![cart](https://github.com/user-attachments/assets/ee8b954d-cb13-4284-8f18-3d1f2ca19aa6) |
+| **Checkout** |![checkout](https://github.com/user-attachments/assets/c8e89664-5f55-4ecb-95a2-bc1e60fcf169)|
